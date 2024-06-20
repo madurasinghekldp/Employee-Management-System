@@ -39,4 +39,14 @@ public class EmployeeController {
     public void updateEmployee(@RequestBody Employee employee){
         service.updateEmployee(employee);
     }
+
+    @GetMapping("get-by-id")
+    public Employee findById(@RequestParam(name = "id") Long id){
+        return service.findById(id);
+    }
+
+    @GetMapping("get-by-fname")
+    public Employee findByFirstName(@RequestParam(name = "firstName") String firstName){
+        return service.findByFirstName(firstName);
+    }
 }
