@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/empsystem
+    username: root
+    password: dulan
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
