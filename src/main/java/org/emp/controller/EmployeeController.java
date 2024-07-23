@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/emp")
 @RequiredArgsConstructor
 public class EmployeeController {
@@ -24,7 +25,7 @@ public class EmployeeController {
         service.addEmployee(employee);
     }
 
-    @GetMapping("get")
+    @GetMapping("get-all")
     public List<Employee> getAll(){
         return service.getAll();
     }
@@ -48,5 +49,10 @@ public class EmployeeController {
     @GetMapping("get-by-fname")
     public Employee findByFirstName(@RequestParam(name = "firstName") String firstName){
         return service.findByFirstName(firstName);
+    }
+
+    @GetMapping("count")
+    public Long getCount(){
+        return service.getCount();
     }
 }

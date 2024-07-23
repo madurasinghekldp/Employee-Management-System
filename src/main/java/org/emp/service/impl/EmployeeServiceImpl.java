@@ -4,8 +4,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.emp.dto.Employee;
 import org.emp.entity.EmployeeEntity;
+import org.emp.repository.EmployeeNativeRepository;
 import org.emp.repository.EmployeeRepository;
 import org.emp.service.EmployeeService;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,11 +17,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
-
+    final ObjectMapper mapper;
     final EmployeeRepository repository;
+    final EmployeeNativeRepository nativeRepository;
+
     @Override
     public void addEmployee(Employee employee) {
-        EmployeeEntity employeeEntity = new ObjectMapper().convertValue(employee, EmployeeEntity.class);
+        EmployeeEntity employeeEntity = mapper.convertValue(employee, EmployeeEntity.class);
         repository.save(employeeEntity);
     }
 
@@ -29,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         List<Employee> employeeList = new ArrayList<>();
         all.forEach(
                 employeeEntity -> {
-                    employeeList.add(new ObjectMapper().convertValue(employeeEntity,Employee.class));
+                    employeeList.add(mapper.convertValue(employeeEntity,Employee.class));
                 }
         );
         return employeeList;
@@ -45,17 +49,21 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void updateEmployee(Employee employee) {
         if(repository.existsById(employee.getId())) {
-            repository.save(new ObjectMapper().convertValue(employee,EmployeeEntity.class));
+            repository.save(mapper.convertValue(employee,EmployeeEntity.class));
         }
     }
 
     @Override
     public Employee findById(Long id) {
-        return new ObjectMapper().convertValue(repository.findById(id).get(),Employee.class);
+        return mapper.convertValue(repository.findById(id).get(),Employee.class);
     }
 
     @Override
     public Employee findByFirstName(String firstName) {
-        return new ObjectMapper().convertValue(repository.findByFirstName(firstName),Employee.class);
+        return mapper.convertValue(repository.findByFirstName(firstName),Employee.class);
+    }
+
+    public Long getCount(){
+        return nativeRepository.getCount();
     }
 }

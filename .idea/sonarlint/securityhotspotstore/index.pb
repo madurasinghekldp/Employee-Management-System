@@ -15,3 +15,7 @@ k
 ;src/main/java/org/emp/service/impl/EmployeeServiceImpl.java,6\0\608013ce66a796d59922696b97410e5b7a1be847
 h
 8src/main/java/org/emp/repository/EmployeeRepository.java,1\9\19c48c7f98ab1c9ec2f9ee4e60244145fb9eb37e
+n
+>src/main/java/org/emp/repository/EmployeeNativeRepository.java,3\d\3d3c7c7ba51009ac48e404e2722e4ab5a2a3347c
+w
+Gsrc/main/java/org/emp/repository/impl/EmployeeNativeRepositoryImpl.java,8\4\84b1b62683f0cdf74dee318e3731d53f61497bc9
