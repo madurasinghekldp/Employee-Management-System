@@ -1,5 +1,8 @@
 
 “
-java:S3655:"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ã¥¬8Êı¢€2J$e891e08a-8fc3-49cd-a556-256e73419e34
+java:S3655:"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ã¥¬8Êı¢€2J$3f5d16cc-be9a-4b50-9c74-c418037e955d
 t
-java:S1602#",Remove useless curly braces around statement(—®ó¤ÿÿÿÿÿ8Óı¢€2J$4ef5dd0e-10bc-4433-a24a-5df5ce840e73
+java:S1602#",Remove useless curly braces around statement(—®ó¤ÿÿÿÿÿ8Óı¢€2J$1d57f0e5-fa30-40e6-96c5-82749e7f3a3d
+
+java:S1128
+"GRemove this unused import 'org.springframework.jdbc.core.JdbcTemplate'.(å ê‹ÿÿÿÿÿ8Á¾‘–2J$2a6826ee-c906-49c2-ba8b-8b502964f71d
