@@ -31,4 +31,11 @@ public class RoleServiceImpl implements RoleService {
         });
         return roleList;
     }
+
+    @Override
+    public void deleteById(Long id) {
+        if(repository.existsById(id)){
+            repository.deleteById(id);
+        }
+    }
 }

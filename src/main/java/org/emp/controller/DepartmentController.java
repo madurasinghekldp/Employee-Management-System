@@ -3,6 +3,7 @@ package org.emp.controller;
 import lombok.RequiredArgsConstructor;
 import org.emp.dto.Department;
 import org.emp.service.DepartmentService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,5 +23,11 @@ public class DepartmentController {
     @GetMapping("/all")
     public List<Department> getAll(){
         return departmentService.getAll();
+    }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void deleteById(@RequestParam(name="id") Long id){
+        departmentService.deleteById(id);
     }
 }

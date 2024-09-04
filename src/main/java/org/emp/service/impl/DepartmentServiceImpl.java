@@ -30,4 +30,11 @@ public class DepartmentServiceImpl implements DepartmentService {
         all.forEach(departmentEntity -> depList.add(mapper.convertValue(departmentEntity, Department.class)));
         return depList;
      }
+
+    @Override
+    public void deleteById(Long id) {
+        if(repository.existsById(id)){
+            repository.deleteById(id);
+        }
+    }
 }
