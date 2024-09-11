@@ -45,3 +45,15 @@ j
 :src/main/java/org/emp/repository/DepartmentRepository.java,3\2\326e802eebb6d34d718bca61b6d5e0b296701288
 j
 :src/main/java/org/emp/controller/DepartmentController.java,6\3\63da1e895ffd0007b2ad0d36eb40b6daed417296
+`
+0src/main/java/org/emp/config/SecurityConfig.java,9\b\9be2d31eb00cd173e37fee5e14701320898ac716
+^
+.src/main/java/org/emp/model/UserPrinciple.java,8\7\87f75cbd2dbcd320416c9d74ae1ce67b937e6259
+S
+#src/main/java/org/emp/dto/User.java,3\0\305ee0b70f779db2575e1019be4ef0c9408aa544
+\
+,src/main/java/org/emp/entity/UserEntity.java,4\4\44f62152a15af49aae2fc8146b8efc52fe94e399
+f
+6src/main/java/org/emp/service/MyUserDetailService.java,c\0\c0ce8137327a4cdb8659a3386be301b1632b5210
+d
+4src/main/java/org/emp/repository/UserRepository.java,6\0\60d4e4a8882faddbc7f18f479186bcb97503cd82
